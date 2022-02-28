@@ -15,7 +15,7 @@ class Owners (commands.Cog) :
         self.color = color_code
         self.error_color = 0xff4a4a
 
-    @slash_command(description="로드",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
+    @slash_command(description="Load Module",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
     async def load(self, ctx, module) :
         try :
             self.bot.load_extension("verify.cogs." + module)
@@ -39,7 +39,7 @@ class Owners (commands.Cog) :
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed = embed)
 
-    @slash_command(description="리로드",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
+    @slash_command(description="Reload Module",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
     async def reload(self, ctx, module) :
         try :
             self.bot.reload_extension("verify.cogs." + module)
@@ -61,7 +61,7 @@ class Owners (commands.Cog) :
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed = embed)
 
-    @slash_command(description="언로드",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
+    @slash_command(description="Unload Module",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
     async def unload(self, ctx, module) :
         try :
             self.bot.unload_extension("verify.cogs." + module)
@@ -83,7 +83,7 @@ class Owners (commands.Cog) :
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed = embed)
 
-    @slash_command(description="모듈리스트",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
+    @slash_command(description="List for Module",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
     async def module_list(self, ctx):
         modulenum = 0
         for m in EXTENSIONS:
@@ -96,7 +96,7 @@ class Owners (commands.Cog) :
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=embed)
 
-    @slash_command(description="서버현황",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
+    @slash_command(description="Show serverinfo",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
     async def serverinfo(self, ctx) :
         embed=discord.Embed(title='owners_server_info', color=color_code)
         embed.add_field(name="Platform", value=platform.platform(), inline=False)
@@ -111,7 +111,7 @@ class Owners (commands.Cog) :
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=embed)
     
-    @slash_command(description="서버리스트",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
+    @slash_command(description="Show serverlist",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
     async def server_list(self, ctx) :
         page = 10
         if len(self.bot.guilds) <= page:
