@@ -21,5 +21,5 @@ class Ping (commands.Cog) :
         await message.edit_original_message(embed=embed)
 
 def setup (bot) :
-    bot.add_cog (Ping (bot))
+    bot.add_cog(Ping (bot))
     LOGGER.info('Ping loaded!')
