@@ -9,7 +9,7 @@ class About (commands.Cog) :
         self.bot = bot
 
     @slash_command(description="저에 대한 정보를 알려드려요!", guild_ids=DebugServer)
-    async def about (self, ctx) :
+    async def about(self, ctx) :
         e=discord.Embed(title="**봇에 대한 정보**", description=AboutBot, color=color_code)
         e.add_field(name="서버 수", value=len(self.bot.guilds), inline=True)
         e.add_field(name="유저 수", value=len(self.bot.users), inline=True)
