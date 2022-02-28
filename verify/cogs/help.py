@@ -46,7 +46,7 @@ class Help (commands.Cog) :
         embed.add_field(name="`/unload` [*모듈명*]",       value=">>> 모듈을 언로드해요!", inline=False)
         embed.add_field(name="`/reload` [*모듈명*]",       value=">>> 모듈을 리로드해요!", inline=False)
         embed.add_field(name="`/serverinfo`",   value=">>> 봇 서버의 사양을 알려줘요!", inline=False)
-        embed.add_field(name="/broadcast` [*공지 내용*]",    value=">>> 공지를 모든 서버에 전송해요!", inline=False)
+        embed.add_field(name="`/broadcast` [*공지 내용*]",    value=">>> 공지를 모든 서버에 전송해요!", inline=False)
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=embed)
 
