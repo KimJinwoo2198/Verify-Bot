@@ -22,7 +22,6 @@ class Help (commands.Cog) :
             if "other" in EXTENSIONS:
                 embed.add_field(name="`/invite`",     value="저랑 다른 서버에서 놀고싶으세요? 당신이 서버의 관리자라면 저를 서버에 초대할 수 있어요!", inline=True)
                 embed.add_field(name="`/version`",    value="관련 모듈 버전을 알려드려요!", inline=True)
-                embed.add_field(name="`/uptime`",     value="서버가 부팅으로부터 얼마나 지났는지를 알려드려요!", inline=True)
 
             if "ping" in EXTENSIONS:
                 embed.add_field(name="`/ping`",       value="핑 속도를 측정해요!", inline=True)
