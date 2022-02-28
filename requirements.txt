@@ -4,3 +4,5 @@ requests
 lxml
 aiohttp
 BeautifulSoup4
+billboard.py
+lxml
