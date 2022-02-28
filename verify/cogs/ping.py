@@ -8,7 +8,7 @@ class Ping (commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
 
-    @slash_command(description="Ping", guild_ids=DebugServer)
+    @slash_command(description="Show Bot Ping", guild_ids=DebugServer)
     async def 핑(self, ctx):
         latancy = self.bot.latency
         before = time.monotonic()

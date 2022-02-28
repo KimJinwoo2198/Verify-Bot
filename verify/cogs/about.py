@@ -10,11 +10,11 @@ class About (commands.Cog) :
 
     @slash_command(description="저에 대한 정보를 알려드려요!", guild_ids=DebugServer)
     async def about (self, ctx) :
-        embed=discord.Embed(title="**봇에 대한 정보**", description=AboutBot, color=color_code)
-        embed.add_field(name="서버 수", value=len(self.bot.guilds), inline=True)
-        embed.add_field(name="유저 수", value=len(self.bot.users), inline=True)
-        embed.set_footer(text=BOT_NAME_TAG_VER)
-        await ctx.respond(embed=embed)
+        e=discord.Embed(title="**봇에 대한 정보**", description=AboutBot, color=color_code)
+        e.add_field(name="서버 수", value=len(self.bot.guilds), inline=True)
+        e.add_field(name="유저 수", value=len(self.bot.users), inline=True)
+        e.set_footer(text=BOT_NAME_TAG_VER)
+        await ctx.respond(embed=e)
 
 def setup (bot) :
     bot.add_cog (About (bot))

@@ -15,17 +15,13 @@ class Help (commands.Cog) :
             help_option = help_option.upper()
         if help_option == "GENERAL" or help_option == "일반":
             embed=discord.Embed(title="**기본적인 명령어**", description="", color=color_code)
-
             if "about" in EXTENSIONS:
                 embed.add_field(name="`/about`",      value="저에 대한 정보를 알려드려요!", inline=True)
-
             if "other" in EXTENSIONS:
                 embed.add_field(name="`/invite`",     value="저랑 다른 서버에서 놀고싶으세요? 당신이 서버의 관리자라면 저를 서버에 초대할 수 있어요!", inline=True)
                 embed.add_field(name="`/version`",    value="관련 모듈 버전을 알려드려요!", inline=True)
-
             if "ping" in EXTENSIONS:
                 embed.add_field(name="`/ping`",       value="핑 속도를 측정해요!", inline=True)
-
             embed.set_footer(text=BOT_NAME_TAG_VER)
             await ctx.respond(embed=embed)
 

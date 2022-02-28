@@ -19,12 +19,9 @@ class Other (commands.Cog) :
 
     @slash_command(description="Software Version", guild_ids=DebugServer)
     async def softver(self, ctx) :
-        javaver = subprocess.check_output("java --version", shell=True, encoding='utf-8')
-        lavalinkver = subprocess.check_output("java -jar Lavalink.jar --version", shell=True, encoding='utf-8')
         embed=discord.Embed(title="**관련 모듈 버전**", color=color_code)
         embed.add_field(name="Python Ver", value=("%s %s") %(platform.python_implementation(), platform.python_version()), inline=False)
         embed.add_field(name="Py-Cord.py Ver", value=discord.__version__, inline=False)
-        embed.add_field(name="Lavalink.py Ver", value=lavalink.__version__, inline=False)
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=embed)
 

@@ -17,7 +17,7 @@ class Owners (commands.Cog) :
 
     @slash_command(description="Load Module",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
     async def load(self, ctx, module) :
-        try :
+        try:
             self.bot.load_extension("verify.cogs." + module)
             LOGGER.info(f"로드 성공!\n모듈 : {module}")
             embed = discord.Embed (
@@ -143,7 +143,6 @@ class Owners (commands.Cog) :
             )
         paginator = pages.Paginator(pages=pages_list)
         await paginator.respond(ctx.interaction, ephemeral=False)
-
 
 def setup (bot) :
     bot.add_cog (Owners (bot))
