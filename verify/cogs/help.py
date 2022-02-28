@@ -9,7 +9,7 @@ class Help (commands.Cog) :
         self.bot = bot
 
     @slash_command(description="Help Command", guild_ids=DebugServer)
-    async def help (self, ctx, *, help_option : Option(str, "Choose help menu.", choices=["INFO", "GENERAL"])) :
+    async def help(self, ctx, *, help_option : Option(str, "Choose help menu.", choices=["INFO", "GENERAL"])) :
         """ Send help """
         if not help_option == None:
             help_option = help_option.upper()
