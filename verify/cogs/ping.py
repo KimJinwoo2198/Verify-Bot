@@ -9,7 +9,7 @@ class Ping (commands.Cog) :
         self.bot = bot
 
     @slash_command(description="Show Bot Ping", guild_ids=DebugServer)
-    async def 핑(self, ctx):
+    async def ping(self, ctx):
         latancy = self.bot.latency
         before = time.monotonic()
         embed=discord.Embed(title="**Ping**", description=f'ping_pong: Pong! WebSocket Ping {round(latancy * 1000)}ms\n:ping_pong: Pong! Measuring...', color=color_code)
