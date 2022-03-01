@@ -13,7 +13,7 @@ async def get_melon():
     musics = parse.find_all("tr", {"class" : "lst50"})
     title = []
     artist = []
-    for num in range(0, 10):
+    for num in range(0, 20):
         title.append(musics[num].find("div", {"class" : "ellipsis rank01"}).find("a").text)
         artist.append(musics[num].find("div", {"class" : "ellipsis rank02"}).find("a").text)
     return title, artist
@@ -22,7 +22,7 @@ async def get_billboard():
     chart = billboard.ChartData('hot-100')
     title = []
     artist = []
-    for num in range(0, 10):
+    for num in range(0, 20):
         title.append(chart[num].title)
         artist.append(chart[num].artist)
     return title, artist

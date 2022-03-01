@@ -18,7 +18,7 @@ class Chart (commands.Cog) :
         elif chart == "BILLBOARD":
             title, artist = await get_billboard()
             embed=discord.Embed(title="**빌보드 차트**", color=color_code)
-        for i in range(0, 10):
+        for i in range(0, 20):
             embed.add_field(name=str(i+1) + ".", value = f"{artist[i]} - {title[i]}", inline=False)
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=embed)
