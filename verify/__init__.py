@@ -15,17 +15,17 @@ if ENV:
     try:
         OWNERS       = set(int(x) for x in os.environ.get("OWNERS", "").split())
     except ValueError:
-        raise Exception("OWNERS 칸이 비어있습니다 !")
+        raise Exception("OWNERS 가 올바르지 않습니다 !")
     try:
         DebugServer  = set(int(x) for x in os.environ.get("DebugServer", "").split())
     except ValueError:
-        raise Exception("DebugChannel 칸이 비어있습니다 !")
+        raise Exception("DebugChannel 가 올바르지 않습니다 !")
     BOT_NAME         = os.environ.get('BOT_NAME', None)
     BOT_TAG          = os.environ.get('BOT_TAG', "#1234")
     try:
         BOT_ID       = int(os.environ.get('BOT_ID', None))
     except ValueError:
-        raise Exception("BOT_ID에 올바른 정수가 없습니다.")
+        raise Exception("BOT_ID 가 올바르지 않습니다 !")
     color_code       = int(os.environ.get('color_code', "0xc68e6e"), 0)
     AboutBot         = os.environ.get('AboutBot', None)
     CommandInt       = os.environ.get('CommandInt', None)
