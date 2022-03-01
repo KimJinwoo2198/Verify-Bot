@@ -132,13 +132,13 @@ class Owners (commands.Cog) :
             numa = numb - page
             for a in range(numa, numb):
                 try:
-                    srvr = srvr + "**{server_name}** - **{server_members_count}명** **{server_id}**\n".format(server_name=botguild[a], server_members_count=botguild[a].member_count)
+                    srvr = srvr + "**{server_name}** - **{server_members_count}명** 서버 아이디 :**{server_id}**\n".format(server_name=botguild[a], server_members_count=botguild[a].member_count)
                 except IndexError:
                     break
 
             pages_list.append(
                 [
-                    discord.Embed(title = "**{server_name}** - **{server_members_count}명** **{server_id}\n".format(BOT_NAME=self.bot.user.name), description="owners_server_list_description2".format(server_count=len(self.bot.guilds), members_count=len(self.bot.users), servers=srvr), color=color_code).set_footer(text=f"{'owners_page'} {str(i)}/{str(allpage)}\n{BOT_NAME_TAG_VER}")
+                    discord.Embed(title = "**{server_name}** - **{server_members_count}명** 서버 아이디 :**{server_id}\n".format(BOT_NAME=self.bot.user.name), description="owners_server_list_description2".format(server_count=len(self.bot.guilds), members_count=len(self.bot.users), servers=srvr), color=color_code).set_footer(text=f"{'owners_page'} {str(i)}/{str(allpage)}\n{BOT_NAME_TAG_VER}")
                 ]
             )
         paginator = pages.Paginator(pages=pages_list)
