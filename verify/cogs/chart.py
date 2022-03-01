@@ -1,8 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.commands import slash_command, Option
-
-from verify import *
+from verify.utils.get_chart import *
 from verify import LOGGER, BOT_NAME_TAG_VER, color_code, DebugServer
 
 class Chart (commands.Cog) :
