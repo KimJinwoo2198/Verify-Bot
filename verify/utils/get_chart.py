@@ -26,15 +26,3 @@ async def get_billboard():
         title.append(chart[num].title)
         artist.append(chart[num].artist)
     return title, artist
-
-async def get_billboardjp():
-    billboardjp_url = 'https://www.billboard-japan.com/charts/detail?a=hot100'
-    data = await getReqTEXT(billboardjp_url, header)
-    parse = BeautifulSoup(data, 'lxml')
-    musics = parse.find("tbody").find_all("tr")
-    title = []
-    artist = []
-    for num in range(0, 10):
-        title.append(musics[num].find("p", {"class" : "musuc_title"}).text)
-        artist.append(musics[num].find("p", {"class" : "artist_name"}).text)
-    return title, artist
