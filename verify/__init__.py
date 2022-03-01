@@ -2,9 +2,6 @@ import os
 import sys
 import logging
 
-# Bot version
-BOT_VER = "V.3.0"
-
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO)
