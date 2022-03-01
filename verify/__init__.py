@@ -15,7 +15,7 @@ if ENV:
     try:
         OWNERS       = set(int(x) for x in os.environ.get("OWNERS", "").split())
     except ValueError:
-        raise Exception("OWNERS 사용자 목록에 올바른 정수가 없습니다.")
+        raise Exception("OWNERS 칸이 비어있습니다.")
     try:
         DebugServer  = set(int(x) for x in os.environ.get("DebugServer", "").split())
     except ValueError:
