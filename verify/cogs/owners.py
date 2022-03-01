@@ -144,6 +144,11 @@ class Owners (commands.Cog) :
         paginator = pages.Paginator(pages=pages_list)
         await paginator.respond(ctx.interaction, ephemeral=False)
 
+    @slash_command(description="Send Embed",permissions=[CommandPermission("owner", 2, True)], guild_ids=DebugServer)
+    async def embed(self, ctx, embed):
+        e = discord.Embed(description=embed,color=color_code)
+        await ctx.respond(embed=e)
+
 def setup (bot) :
     bot.add_cog (Owners (bot))
     LOGGER.info('Owners Loaded!')
