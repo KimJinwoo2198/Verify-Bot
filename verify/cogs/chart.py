@@ -9,8 +9,8 @@ class Chart (commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
 
-    @slash_command()
-    async def chart(self, ctx, *, chart : Option(str, "Choose chart.", choices=["Melon", "Billboard"],guild_ids=DebugServer)):
+    @slash_command(description="Show Music Chart",guild_ids=DebugServer)
+    async def chart(self, ctx, *, chart : Option(str, "Choose chart.", choices=["Melon", "Billboard"])):
         if not chart == None:
             chart = chart.upper()
         if chart == "MELON":
