@@ -4,7 +4,7 @@ from discord.commands import slash_command, Option
 from verify.utils.get_chart import *
 from verify import LOGGER, BOT_NAME_TAG_VER, color_code, DebugServer
 
-class Chart (commands.Cog) :
+class Chart(commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
 
@@ -24,5 +24,5 @@ class Chart (commands.Cog) :
         await ctx.respond(embed=embed)
 
 def setup (bot) :
-    bot.add_cog (Chart (bot))
+    bot.add_cog (Chart(bot))
     LOGGER.info('Chart loaded!')
