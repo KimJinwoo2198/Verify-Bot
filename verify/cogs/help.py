@@ -8,7 +8,7 @@ class Help (commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
 
-    @slash_command(description="Help Command", guild_ids=DebugServer)
+    @slash_command(description="Show Help Command", guild_ids=DebugServer)
     async def help(self, ctx, *, help_option : Option(str, "Choose help menu.", choices=["INFO", "GENERAL"])) :
         """ Send help """
         if not help_option == None:
