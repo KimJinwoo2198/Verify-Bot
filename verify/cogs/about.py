@@ -4,7 +4,7 @@ from discord.commands import slash_command
 
 from verify import LOGGER, BOT_NAME_TAG_VER, color_code, AboutBot, DebugServer
 
-class About (commands.Cog) :
+class About(commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
 
@@ -17,6 +17,6 @@ class About (commands.Cog) :
         e.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=e)
 
-def setup (bot) :
-    bot.add_cog (About (bot))
+def setup(bot) :
+    bot.add_cog(About(bot))
     LOGGER.info('About loaded!')
