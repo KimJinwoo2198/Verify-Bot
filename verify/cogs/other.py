@@ -25,6 +25,12 @@ class Other (commands.Cog) :
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=embed)
 
+    @slash_command(description="Embed", guild_ids=DebugServer)
+    async def embed2(self, ctx, msg):
+        embed=discord.Embed(description=msg, color=color_code)
+        embed.set_footer(f"이 메세지는 해당봇과 관련이 없습니다.")
+        await ctx.respond(embed=embed)
+
 def setup (bot) :
     bot.add_cog (Other (bot))
     LOGGER.info('Other loaded!')
