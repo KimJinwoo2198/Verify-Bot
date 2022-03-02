@@ -8,7 +8,7 @@ class Config(object):
     BOT_TAG = "#" # 태그
     BOT_ID = 123456789      # 봇 아이디
     AboutBot = "" # 봇 정보
-    CommandInt = '!'
+    CommandInt = '!' # 커맨드 접두사 ( 그대로 놔둬도 됩니다. )
     color_code = 0x2f3136 # 색상코드
 
 class Production(Config):
