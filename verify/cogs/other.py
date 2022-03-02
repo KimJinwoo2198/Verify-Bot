@@ -6,7 +6,7 @@ from discord.commands import slash_command
 
 from verify import LOGGER, BOT_NAME_TAG_VER, DebugServer, color_code
 
-class Other (commands.Cog) :
+class Other(commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
 
@@ -31,6 +31,6 @@ class Other (commands.Cog) :
         embed.set_footer(f"이 메세지는 해당봇과 관련이 없습니다.")
         await ctx.respond(embed=embed)
 
-def setup (bot) :
-    bot.add_cog (Other (bot))
+def setup(bot) :
+    bot.add_cog(Other(bot))
     LOGGER.info('Other loaded!')
