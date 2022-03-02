@@ -20,7 +20,7 @@ class Verify(discord.ui.Button):
             return
         if role not in user.roles:
             await user.add_roles(role)
-            await interaction.response.send_message(f"🎉 {role.mention} 역할을 지급 받으셨어요!", ephemeral=True)
+            await interaction.response.send_message(f"{role.mention} 역할을 지급 받으셨어요!", ephemeral=True)
         else:
             await user.remove_roles(role)
             await interaction.response.send_message(
