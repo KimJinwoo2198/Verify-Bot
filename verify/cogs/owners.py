@@ -8,7 +8,7 @@ from discord.commands import CommandPermission, slash_command
 
 from verify import LOGGER, color_code, BOT_NAME_TAG_VER, EXTENSIONS, DebugServer
 
-class Owners (commands.Cog) :
+class Owners(commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
         self._last_members = None
@@ -150,5 +150,5 @@ class Owners (commands.Cog) :
         await ctx.respond(embed=e)
 
 def setup (bot) :
-    bot.add_cog (Owners (bot))
+    bot.add_cog(Owners(bot))
     LOGGER.info('Owners Loaded!')
