@@ -24,7 +24,7 @@ class Verify(discord.ui.Button):
         else:
             await user.remove_roles(role)
             await interaction.response.send_message(
-                f"❌ {role.mention} 역할이 제거 되었어요!", ephemeral=True
+                f"{role.mention} 역할이 제거 되었어요!", ephemeral=True
             )
 
 class ButtonRoleCog(commands.Cog):
