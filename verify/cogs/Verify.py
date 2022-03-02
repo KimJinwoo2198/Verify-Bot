@@ -4,7 +4,7 @@ from discord.ext import commands
 
 from verify import DebugServer
 
-class RoleButton(discord.ui.Button):
+class Verify(discord.ui.Button):
     def __init__(self, role: discord.Role):
         super().__init__(
             label=role.name,
@@ -42,4 +42,4 @@ class ButtonRoleCog(commands.Cog):
         await ctx.respond(message, view=view)
 
 def setup(bot):
-    bot.add_cog(ButtonRoleCog(bot))
+    bot.add_cog(Verify(bot))
