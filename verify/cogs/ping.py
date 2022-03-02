@@ -4,7 +4,7 @@ from discord.ext import commands
 from discord.commands import slash_command
 from verify import LOGGER, BOT_NAME_TAG_VER, color_code, DebugServer
 
-class Ping (commands.Cog) :
+class Ping(commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
 
@@ -21,5 +21,5 @@ class Ping (commands.Cog) :
         await message.edit_original_message(embed=embed)
 
 def setup (bot) :
-    bot.add_cog(Ping (bot))
+    bot.add_cog(Ping(bot))
     LOGGER.info('Ping loaded!')
