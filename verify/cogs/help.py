@@ -4,7 +4,7 @@ from discord.commands import slash_command, Option, CommandPermission
 
 from verify import LOGGER, BOT_NAME_TAG_VER, color_code, OWNERS, EXTENSIONS, DebugServer
 
-class Help (commands.Cog) :
+class Help(commands.Cog) :
     def __init__ (self, bot) :
         self.bot = bot
 
@@ -46,6 +46,6 @@ class Help (commands.Cog) :
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=embed)
 
-def setup (bot) :
-    bot.add_cog (Help (bot))
+def setup(bot):
+    bot.add_cog(Help(bot))
     LOGGER.info('Help loaded!')
