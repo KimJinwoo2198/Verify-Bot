@@ -13,6 +13,7 @@ class About (commands.Cog) :
         e=discord.Embed(title="**봇에 대한 정보**", description=AboutBot, color=color_code)
         e.add_field(name="서버 수", value=len(self.bot.guilds), inline=True)
         e.add_field(name="유저 수", value=len(self.bot.users), inline=True)
+        e.add_file(name="버전", value="V 1.0", inline=True)
         e.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=e)
 
