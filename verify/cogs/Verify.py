@@ -2,7 +2,7 @@ import discord
 from discord.commands.core import slash_command
 from discord.ext import commands
 
-from verify import DebugServer
+from verify import DebugServer, BOT_NAME_TAG_VER
 
 class Verify(discord.ui.Button):
     def __init__(self, role: discord.Role):
