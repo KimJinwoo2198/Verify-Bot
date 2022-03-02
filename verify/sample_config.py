@@ -9,11 +9,9 @@ class Config(object):
     BOT_ID = 123456789      # 봇 아이디
     AboutBot = "" # 봇 정보
     CommandInt = '!'
-
     color_code = 0x2f3136 # 색상코드
 
 class Production(Config):
     LOGGER = False
-
 class Development(Config):
     LOGGER = True
