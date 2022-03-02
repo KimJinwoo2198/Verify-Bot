@@ -23,6 +23,6 @@ class Chart(commands.Cog) :
         embed.set_footer(text=BOT_NAME_TAG_VER)
         await ctx.respond(embed=embed)
 
-def setup (bot) :
-    bot.add_cog (Chart(bot))
+def setup(bot):
+    bot.add_cog(Chart(bot))
     LOGGER.info('Chart loaded!')
